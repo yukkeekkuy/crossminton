@@ -3,7 +3,7 @@ const SUB_TEXT = `ここにも少し`;
 
 function Hero() {
   return (
-    <div className={'h-[500px] w-full'}>
+    <div className={'mx-auto h-[500px] max-w-5xl'}>
       <div className={'h-full p-2 md:flex'}>
         <div className={'h-40 w-full md:h-full md:w-1/2'}>
           <div className={'flex h-full w-full items-center'}>
