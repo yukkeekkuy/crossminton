@@ -1,6 +1,7 @@
 import type { NextPage } from 'next';
 
 import Hero from '../components/Hero';
+import Results from '../components/Results';
 import Videos from '../components/Videos';
 
 const Home: NextPage = () => {
@@ -8,6 +9,7 @@ const Home: NextPage = () => {
     <div className={'mx-auto h-full w-full'}>
       <Hero />
       <Videos />
+      <Results />
     </div>
   );
 };
