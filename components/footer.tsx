@@ -1,7 +1,7 @@
 function Footer() {
   return (
-    <div className={'bg-green-300 w-full h-auto'}>
-      <p className={'text-sky-300 text-3xl'}>footer</p>
+    <div className={'h-auto w-full bg-green-300'}>
+      <p className={'text-3xl text-sky-300'}>footer</p>
     </div>
   );
 }
