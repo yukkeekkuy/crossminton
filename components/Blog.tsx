@@ -57,7 +57,7 @@ const EXAMPLE_BLOGS: TBlog[] = [
 
 function Blog() {
   return (
-    <div className={'w-full bg-base-200 py-8'}>
+    <div className={'w-full bg-slate-100 py-8 dark:bg-base-200'}>
       <div className={'mx-auto mb-4 max-w-5xl'}>
         <div className={'mb-8 text-center'}>
           <Heading text={'ブログ'} />
@@ -65,8 +65,9 @@ function Blog() {
         <div
           className={'flex w-full flex-col items-center gap-4 font-notoSans'}
         >
-          {EXAMPLE_BLOGS.map((blog) => (
+          {EXAMPLE_BLOGS.map((blog, i) => (
             <BlogCard
+              key={i}
               src={blog.src}
               title={blog.title}
               content={blog.content}

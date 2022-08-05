@@ -27,7 +27,7 @@ function Video({ src }: TVideo) {
 
 function Videos() {
   return (
-    <div className={'w-full bg-base-200 py-16'}>
+    <div className={'w-full bg-slate-100 py-16 dark:bg-base-200'}>
       <div className={'mx-auto h-auto max-w-5xl'}>
         <div className={'pb-8 text-center'}>
           <Heading text={'試合動画'} />
