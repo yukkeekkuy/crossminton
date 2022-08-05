@@ -49,7 +49,7 @@ const SITEMAP_MENU: { text: string; href: string }[] = [
 
 function Footer() {
   return (
-    <footer className={'h-auto w-full bg-slate-900 py-8'}>
+    <footer className={'h-auto w-full bg-slate-900 py-8 dark:bg-base-300'}>
       <div
         id={'social-links'}
         className={'mb-8 flex w-auto flex-row justify-center gap-4'}

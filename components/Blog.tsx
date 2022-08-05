@@ -9,7 +9,7 @@ function BlogCard({ src, title, content }: TBlog) {
   return (
     <a
       href="#"
-      className="flex flex-col items-center rounded-lg border bg-white shadow-md hover:bg-gray-100  md:max-w-xl md:flex-row"
+      className="flex flex-col items-center rounded-lg border bg-white shadow-md hover:bg-gray-100 dark:border-none  dark:bg-neutral dark:hover:bg-neutral-focus md:max-w-xl md:flex-row"
     >
       <img
         className="h-32 w-full rounded-t-lg object-cover md:h-48 md:w-48 md:rounded-none md:rounded-l-lg"
@@ -17,10 +17,12 @@ function BlogCard({ src, title, content }: TBlog) {
         alt={title}
       />
       <div className="flex w-96 flex-col justify-between p-4 leading-normal">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-neutral-content">
           {title}
         </h5>
-        <p className="mb-3 font-normal text-gray-700 ">{content}</p>
+        <p className="mb-3 font-normal text-gray-700 dark:text-neutral-content">
+          {content}
+        </p>
       </div>
     </a>
   );
@@ -55,7 +57,7 @@ const EXAMPLE_BLOGS: TBlog[] = [
 
 function Blog() {
   return (
-    <div className={'w-full bg-slate-100 py-8'}>
+    <div className={'w-full bg-base-200 py-8'}>
       <div className={'mx-auto mb-4 max-w-5xl'}>
         <div className={'mb-8 text-center'}>
           <Heading text={'ブログ'} />
