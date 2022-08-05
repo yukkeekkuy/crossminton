@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Heading } from './ui';
+import { Button, Heading } from './ui';
 
 type TResult = {
   id: string;
@@ -34,18 +34,6 @@ const DocumentIcon = () => (
     />
   </svg>
 );
-
-const Button = () => {
-  return (
-    <button
-      className={
-        'rounded bg-cyan-500 py-2 px-4 font-bold text-white hover:bg-cyan-700'
-      }
-    >
-      More
-    </button>
-  );
-};
 
 function Results() {
   return (
@@ -82,7 +70,7 @@ function Results() {
         </table>
       </div>
       <div className={'w-full text-center'}>
-        <Button />
+        <Button text={'More'} />
       </div>
     </div>
   );
