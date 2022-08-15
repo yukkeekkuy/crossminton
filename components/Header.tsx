@@ -1,5 +1,20 @@
 import { useTheme } from 'next-themes';
 
+const MENUS: { title: string }[] = [
+  {
+    title: 'クロスミントンとは',
+  },
+  {
+    title: 'ブログ',
+  },
+  {
+    title: '試合結果',
+  },
+  {
+    title: 'お問い合わせ',
+  },
+];
+
 function ColorToggleBtn() {
   const { theme, setTheme } = useTheme();
   return (
@@ -46,30 +61,23 @@ function ColorToggleBtn() {
 
 function Header({ children }: any) {
   return (
-    <div className="drawer drawer-end bg-white text-neutral dark:bg-base-100 dark:text-neutral-content">
+    <div className="drawer drawer-end bg-slate-50 text-neutral dark:bg-slate-800 dark:text-primary-content">
       <input id="navbar-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         <div className="navbar mx-auto max-w-5xl">
           <h1 className={'flex-1 font-notoSans text-3xl font-black'}>
-            Crossminton🏸
+            Crossminton!!🏸
           </h1>
           <div>
             <ColorToggleBtn />
           </div>
           <div className="hidden flex-none items-end lg:block">
             <ul className="menu menu-horizontal font-kiwi font-bold">
-              <li>
-                <a href="#">クロスミントンとは</a>
-              </li>
-              <li>
-                <a href="#">ブログ</a>
-              </li>
-              <li>
-                <a href="#">試合結果</a>
-              </li>
-              <li>
-                <a href="#">お問い合わせ</a>
-              </li>
+              {MENUS.map((menu) => (
+                <li key={menu.title}>
+                  <a href="#">{menu.title}</a>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="flex-none lg:hidden">
@@ -94,19 +102,14 @@ function Header({ children }: any) {
       </div>
       <div className="drawer-side">
         <label htmlFor="navbar-drawer" className="drawer-overlay"></label>
-        <ul className="menu w-80 overflow-y-auto bg-base-100 p-4">
-          <li>
-            <a href="#">クロスミントンとは</a>
-          </li>
-          <li>
-            <a href="#">ブログ</a>
-          </li>
-          <li>
-            <a href="#">試合結果</a>
-          </li>
-          <li>
-            <a href="#">お問い合わせ</a>
-          </li>
+        <ul className="menu w-80 overflow-y-auto bg-slate-50 p-4 dark:bg-slate-700 dark:text-primary-content">
+          {MENUS.map((menu) => (
+            <li key={menu.title}>
+              <a href="#" className="dark:hover:bg-opacity-60">
+                {menu.title}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </div>
