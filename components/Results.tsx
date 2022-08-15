@@ -37,7 +37,7 @@ const DocumentIcon = () => (
 
 function Results() {
   return (
-    <div className={'mx-auto max-w-5xl py-12'}>
+    <div className={'mx-auto max-w-5xl bg-slate-50 py-12 dark:bg-slate-800'}>
       <div className={'mx-12'}>
         <div className={'mb-8 text-center'}>
           <Heading text={'試合結果'} />
@@ -70,7 +70,7 @@ function Results() {
         </table>
       </div>
       <div className={'w-full text-center'}>
-        <Button text={'More'} />
+        <Button text={'一覧を見る'} />
       </div>
     </div>
   );

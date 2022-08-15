@@ -9,7 +9,7 @@ function BlogCard({ src, title, content }: TBlog) {
   return (
     <a
       href="#"
-      className="flex flex-col items-center rounded-lg border bg-white shadow-md hover:bg-gray-100 dark:border-none  dark:bg-neutral dark:hover:bg-neutral-focus md:max-w-xl md:flex-row"
+      className="flex flex-col items-center rounded-lg border bg-white shadow-md hover:bg-gray-100 dark:border-none dark:bg-slate-800 dark:hover:bg-slate-600 md:max-w-xl md:flex-row"
     >
       <img
         className="h-32 w-full rounded-t-lg object-cover md:h-48 md:w-48 md:rounded-none md:rounded-l-lg"
@@ -17,10 +17,10 @@ function BlogCard({ src, title, content }: TBlog) {
         alt={title}
       />
       <div className="flex w-96 flex-col justify-between p-4 leading-normal">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-neutral-content">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-primary-content">
           {title}
         </h5>
-        <p className="mb-3 font-normal text-gray-700 dark:text-neutral-content">
+        <p className="mb-3 font-normal text-gray-700 line-clamp-3 dark:text-primary-content">
           {content}
         </p>
       </div>
@@ -37,7 +37,8 @@ const EXAMPLE_BLOGS: TBlog[] = [
   {
     src: './images/bike.jpg',
     title: '自転車楽しい',
-    content: '自転車行きたい',
+    content:
+      '吾輩は猫である。名前はまだ無い。どこで生れたかとんと見当がつかぬ。何でも薄暗いじめじめした所でニャーニャー泣いていた事だけは記憶している。吾輩はここで始めて人間というものを見た。しかもあとで聞くとそれは書生という人間中で一番獰悪な種族であったそうだ。この書生というのは時々我々を捕えて煮て食うという話である。しかしその当時は何という考もなかったから別段恐しいとも思わなかった。ただ彼の掌に載せられてスーと持ち上げられた時何だかフワフワした感じがあったばかりである。掌の上で少し落ちついて書生の顔を見たのがいわゆる人間というものの見始であろう。この時妙なものだと思った感じが今でも残っている。第一毛をもって装飾されべきはずの顔がつるつるしてまるで薬缶だ。その後猫にもだいぶ逢ったがこんな片輪には一度も出会わした事がない。のみならず顔の真中があまりに突起している。',
   },
   {
     src: './images/soccer.jpg',
@@ -57,7 +58,7 @@ const EXAMPLE_BLOGS: TBlog[] = [
 
 function Blog() {
   return (
-    <div className={'w-full bg-slate-100 py-8 dark:bg-base-200'}>
+    <div className={'w-full bg-slate-100 py-8 dark:bg-slate-700'}>
       <div className={'mx-auto mb-4 max-w-5xl'}>
         <div className={'mb-8 text-center'}>
           <Heading text={'ブログ'} />
@@ -76,7 +77,7 @@ function Blog() {
         </div>
       </div>
       <div className={'text-center'}>
-        <Button text={'More'} />
+        <Button text={'一覧を見る'} />
       </div>
     </div>
   );
