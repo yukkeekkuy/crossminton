@@ -20,7 +20,7 @@ function ColorToggleBtn() {
   return (
     <button
       className={
-        'btn btn-circle btn-outline btn-sm text-neutral hover:bg-yellow-400 dark:text-neutral-content dark:hover:bg-orange-400 dark:hover:text-neutral'
+        'btn btn-circle btn-outline btn-sm text-stone-800 hover:bg-yellow-400 dark:text-stone-100 dark:hover:bg-orange-400 dark:hover:text-stone-800'
       }
       onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
     >
@@ -61,12 +61,12 @@ function ColorToggleBtn() {
 
 function Header({ children }: any) {
   return (
-    <div className="drawer drawer-end bg-slate-50 text-neutral dark:bg-slate-800 dark:text-primary-content">
+    <div className="drawer drawer-end bg-slate-50 text-stone-800 dark:bg-slate-800 dark:text-stone-100">
       <input id="navbar-drawer" type="checkbox" className="drawer-toggle" />
       <div className="drawer-content flex flex-col">
         <div className="navbar mx-auto max-w-5xl">
           <h1 className={'flex-1 font-notoSans text-3xl font-black'}>
-            Crossminton!!🏸
+            Crossminton🏸
           </h1>
           <div>
             <ColorToggleBtn />
@@ -102,7 +102,7 @@ function Header({ children }: any) {
       </div>
       <div className="drawer-side">
         <label htmlFor="navbar-drawer" className="drawer-overlay"></label>
-        <ul className="menu w-80 overflow-y-auto bg-slate-50 p-4 dark:bg-slate-700 dark:text-primary-content">
+        <ul className="menu w-80 overflow-y-auto bg-slate-50 p-4 text-stone-800 dark:bg-slate-700 dark:text-stone-100">
           {MENUS.map((menu) => (
             <li key={menu.title}>
               <a href="#" className="dark:hover:bg-opacity-60">

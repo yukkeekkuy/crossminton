@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, Heading } from './ui';
 
 const placeholderImg =
-  'https://images.unsplash.com/photo-1599009434802-ca1dd09895e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80';
+  'https://images.unsplash.com/photo-1599009434802-ca1dd09895e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80';
 
 function BlogCard({ src, title, content }: TBlog) {
   return (
@@ -17,10 +17,10 @@ function BlogCard({ src, title, content }: TBlog) {
         alt={title}
       />
       <div className="flex w-96 flex-col justify-between p-4 leading-normal">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-primary-content">
+        <h5 className="mb-2 text-2xl font-bold tracking-tight text-stone-800 dark:text-stone-100">
           {title}
         </h5>
-        <p className="mb-3 font-normal text-gray-700 line-clamp-3 dark:text-primary-content">
+        <p className="mb-3 font-normal text-stone-800 line-clamp-3 dark:text-stone-100">
           {content}
         </p>
       </div>

@@ -29,7 +29,7 @@ function Videos() {
   return (
     <div
       className={
-        'w-full bg-slate-100 py-16 dark:bg-slate-700 dark:text-primary-content'
+        'w-full bg-slate-100 py-16 text-stone-800 dark:bg-slate-700 dark:text-stone-100'
       }
     >
       <div className={'mx-auto h-auto max-w-5xl'}>

@@ -5,7 +5,7 @@ function Hero() {
   return (
     <div
       className={
-        'mx-auto h-[500px] max-w-5xl bg-slate-50 dark:bg-slate-800 dark:text-primary-content'
+        'mx-auto h-[500px] max-w-5xl bg-slate-50 dark:bg-slate-800 dark:text-stone-100'
       }
     >
       <div className={'h-full p-2 md:flex'}>

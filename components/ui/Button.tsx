@@ -6,7 +6,7 @@ export const Button = ({ text, onClick }: ButtonProps) => {
   return (
     <button
       className={
-        'rounded bg-cyan-500 py-2 px-4 font-bold text-white hover:bg-cyan-700 dark:bg-primary dark:hover:bg-primary-focus'
+        'rounded bg-sky-400 py-2 px-4 font-bold text-white hover:bg-sky-500 dark:bg-fuchsia-700 dark:hover:bg-fuchsia-900'
       }
       onClick={onClick}
     >
