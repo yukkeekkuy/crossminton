@@ -16,7 +16,7 @@ function BlogCard({ src, title, content }: TBlog) {
         src={src || placeholderImg}
         alt={title}
       />
-      <div className="flex w-full flex-col justify-between p-4 leading-normal">
+      <div className="flex flex-col justify-between p-4 leading-normal">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-stone-800 dark:text-stone-100">
           {title}
         </h5>
