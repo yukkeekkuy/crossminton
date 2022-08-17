@@ -1,28 +1,62 @@
 import React from 'react';
 
 import { Button, Heading } from './ui';
+import Tag from './ui/Tag';
 
 const placeholderImg =
   'https://images.unsplash.com/photo-1599009434802-ca1dd09895e7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80';
+
+function ClockIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-6 w-6"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      strokeWidth={2}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+      />
+    </svg>
+  );
+}
 
 function BlogCard({ src, title, content }: TBlog) {
   return (
     <a
       href="#"
-      className="flex w-full flex-col items-center rounded-lg border bg-white shadow-md hover:bg-gray-100 dark:border-none dark:bg-slate-800 dark:hover:bg-slate-600 md:max-w-xl md:flex-row"
+      className="flex h-full w-full flex-col rounded-lg border bg-white shadow-md hover:bg-gray-100 dark:border-none dark:bg-slate-800 dark:hover:bg-slate-600 md:max-w-xl md:flex-row"
     >
       <img
-        className="h-32 w-full rounded-t-lg object-cover md:h-48 md:w-48 md:rounded-none md:rounded-l-lg"
+        className="h-32 w-full rounded-t-lg object-cover object-center md:h-48 md:w-1/3 md:rounded-none md:rounded-l-lg"
         src={src || placeholderImg}
         alt={title}
       />
-      <div className="flex flex-col justify-between p-4 leading-normal">
-        <h5 className="mb-2 text-2xl font-bold tracking-tight text-stone-800 dark:text-stone-100">
-          {title}
-        </h5>
-        <p className="mb-3 font-normal text-stone-800 line-clamp-3 dark:text-stone-100">
-          {content}
-        </p>
+      <div className="flex h-auto flex-col justify-between p-4 leading-normal md:h-auto md:w-2/3">
+        <div className="flex h-auto flex-grow flex-col">
+          <h5 className="text-2xl font-bold tracking-tight text-stone-800 dark:text-stone-100">
+            {title}
+          </h5>
+          <p className="my-2 w-full font-normal text-stone-800 line-clamp-3 dark:text-stone-100 md:my-auto">
+            {content}
+          </p>
+        </div>
+        <div className="flex items-center justify-between py-2">
+          <Tag
+            text="ダミータグ"
+            textColor="text-stone-600 dark:text-stone-200"
+            size="badge-md"
+            variant="badge-outline"
+          />
+          <span className="flex items-center gap-2 text-stone-600 dark:text-stone-200">
+            <ClockIcon />
+            2022-08-17
+          </span>
+        </div>
       </div>
     </a>
   );
